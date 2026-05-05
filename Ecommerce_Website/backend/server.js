@@ -1,17 +1,33 @@
 const express = require("express");
+const app = express();
 const cors = require("cors");
 
-const app = express();
-
-app.use(cors());
+const authRouter = require("./routes/auth_router");
+const connectDB = require("./utils/db");
+const errorMiddleware = require("./middlewares/error-middleware");
+const product = require('./routes/productRoutes');
+const order = require('./routes/orderRoutes')
+const contactroute = require("./routes/contact_router")
+app.use(cors()); // 👈 simple
+const corsOptions = {
+  origin: " http://localhost:5173",
+  methods: "GET, POST, PUT, DELETE, PATCH, HEAD",
+  credentials: true,
+};
+// ✅ Middleware
+app.use(cors(corsOptions));
 app.use(express.json());
+// ✅ Routes
+app.use("/api/auth", authRouter);
+// ✅ Error middleware (always last)
+app.use(errorMiddleware);
+app.use('/api/products', product );
+app.use('/api/orders', order );
 
-app.get("/", (req, res) => {
-  res.send("Backend is running successfully");
-});
-
-const PORT = 5000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.use("/api/form", contactroute);
+const PORT = 2000;
+connectDB().then(() => {
+  app.listen(PORT, () => {
+    console.log(`Server is running at port: ${PORT}`);
+  });
 });

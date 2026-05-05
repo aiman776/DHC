@@ -1,0 +1,229 @@
+.hero-section-cont {
+  position: relative;
+  height: 435px; /* pura screen fill kare */
+  background: url("/images/pagesbanner.png") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffc107 ;
+}
+
+.hero-title-cont {
+  margin-top: 80px; /* navbar se neeche push */
+  font-size: 3rem;
+  font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fefcf6;
+  text-shadow: 0 0 6px rgba(0,0,0,0.7); 
+}
+
+/* Full page background */
+.contact-page {
+  min-height: 100vh;
+ background:  linear-gradient(
+              rgba(15, 42, 138, 0.85),
+              rgba(15, 42, 138, 0.85)),
+            url('/images/download.png') no-repeat center center / cover;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 50px;
+}
+
+/* Two column layout */
+.contact-container {
+  display: flex;
+  gap: 40px;
+  width: 100%;
+  max-width: 1100px;
+  color: #fff;
+  align-items: center; /* 👈 ye add karo */
+}
+
+/* Left Side - Info */
+.contact-info {
+  flex: 1;
+  padding: 30px;
+  color: #fff;
+}
+
+.contact-info h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.info-item i {
+  font-size: 20px;
+  margin-right: 15px;
+  color: #4caf50;
+}
+
+.info-item h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+/* Right Side - Form Container */
+.right-contain {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Floating label group */
+.section-form form div {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.section-form input,
+.section-form textarea {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.section-form label {
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.3s ease all;
+  opacity: 0.8;
+}
+
+/* Label animation */
+.section-form input:focus + label,
+.section-form input:not(:placeholder-shown) + label,
+.section-form textarea:focus + label,
+.section-form textarea:not(:placeholder-shown) + label {
+  top: -12px;
+  font-size: 14px;
+  color: #f0f6f0;
+}
+
+/* Submit Button */
+.right-contain button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.right-contain button:hover {
+  background-color: #45a049;
+}
+
+
+/* ============================= */
+/*       RESPONSIVE DESIGN       */
+/* ============================= */
+
+@media (max-width: 992px) {
+  .contact-page {
+    padding: 30px;
+  }
+
+  .contact-info h2 {
+    font-size: 26px;
+  }
+
+  .info-item i {
+    font-size: 18px;
+  }
+
+  .right-contain {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Stack items vertically */
+  .contact-page {
+    flex-direction: column;
+    gap: 30px;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .contact-info {
+    padding: 10px;
+  }
+
+  .contact-info h2 {
+    font-size: 24px;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+
+  .right-contain {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .section-form form div {
+    margin-bottom: 20px;
+  }
+
+  .right-contain button {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title-con {
+    font-size: 2rem;
+  }
+
+  .contact-page {
+    padding: 20px;
+  }
+
+  .right-contain {
+    padding: 20px;
+  }
+
+  .section-form input,
+  .section-form textarea {
+    font-size: 14px;
+  }
+
+  .right-contain button {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
