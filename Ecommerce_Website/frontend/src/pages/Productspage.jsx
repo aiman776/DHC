@@ -12,7 +12,7 @@ export const Productspage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get("http://localhost:7000/api/products");
+        const { data } = await axios.get("http://localhost:2000/api/products");
 
         // backend se jo aaye wahi set hoga
         setProducts(Array.isArray(data) ? data : []);
