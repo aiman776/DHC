@@ -8,16 +8,95 @@ export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header>
-      <div className="container">
-        {/* Logo */}
-        <div className="logo-brand">
-          <NavLink to="/">
-            <img src="/images/logo2.png" alt="Logo" />
-          </NavLink>
+    <header className="header">
+
+      {/* TOP NAVBAR */}
+      <div className="navbarcontainer">
+
+    {/* LOGO */}
+<div className="logo-brand">
+  <NavLink to="/" className="logo-link">
+    
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/3081/3081559.png"
+      alt="Logo"
+    />
+
+    <h2>Brand</h2>
+
+  </NavLink>
+</div>
+
+        {/* SEARCH BAR */}
+        <div className="search-box">
+          <input type="text" placeholder="Search" />
+
+          <select>
+            <option>All category</option>
+          </select>
+
+          <button>Search</button>
         </div>
 
-        {/* Hamburger / Close Button */}
+        {/* RIGHT ICONS */}
+        <ul className="nav-icons">
+
+          <li>
+            <NavLink to="/" className="icon-box">
+              <i className="fa-solid fa-house"></i>
+              <span>Home</span>
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/propro" className="icon-box">
+              <i className="fa-solid fa-box-open"></i>
+              <span>Products</span>
+            </NavLink>
+          </li>
+
+          <li>
+            <NavLink to="/contact" className="icon-box">
+              <i className="fa-regular fa-message"></i>
+              <span>Message</span>
+            </NavLink>
+          </li>
+
+          {isLoggedIn ? (
+            <>
+              <li>
+                <NavLink to="/cart" className="icon-box">
+                  <i className="fa-solid fa-cart-shopping"></i>
+                  <span>Cart</span>
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/my-orders" className="icon-box">
+                  <i className="fa-solid fa-bag-shopping"></i>
+                  <span>Orders</span>
+                </NavLink>
+              </li>
+
+              <li>
+                <NavLink to="/profile" className="icon-box">
+                  <i className="fa-regular fa-user"></i>
+                  <span>Profile</span>
+                </NavLink>
+              </li>
+            </>
+          ) : (
+            <li>
+              <NavLink to="/login" className="icon-box">
+                <i className="fa-solid fa-right-to-bracket"></i>
+                <span>Login</span>
+              </NavLink>
+            </li>
+          )}
+
+        </ul>
+
+        {/* MOBILE MENU BUTTON */}
         <div
           className="menu-toggle"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -25,40 +104,48 @@ export const Navbar = () => {
           {menuOpen ? "✕" : "☰"}
         </div>
 
-        {/* Navigation Drawer */}
-        <nav className={menuOpen ? "nav-drawer open" : "nav-drawer"}>
-          <ul onClick={() => setMenuOpen(false)}>
-            {/* Common */}
-            <li>
-              <NavLink to="/">Home</NavLink>
-            </li>
-                <li>
-              <NavLink to="/propro"> Our Products </NavLink>
-            </li>
-            <li>
-              <NavLink to="/cart"> Shopping Cart</NavLink>
-            </li>
-              <li><NavLink to="/contact">Contact us </NavLink></li>
-
-            {/* Logged In User */}
-            {isLoggedIn ? (
-              <>
-                <li>
-                  <NavLink to="/my-orders">My Orders</NavLink>
-                </li>
-
-               <li><NavLink to="/profile">Profile</NavLink></li>
-
-              </>
-            ) : (
-              /* Not Logged In */
-              <li>
-                <NavLink to="/login">SignUp / Login</NavLink>
-              </li>
-            )}
-          </ul>
-        </nav>
       </div>
+
+      {/* SECOND NAVBAR */}
+      <div className={menuOpen ? "bottom-navbar open" : "bottom-navbar"}>
+
+        <div className="bottom-container">
+
+          <div className="bottom-left">
+
+            <NavLink to="/">☰ All category</NavLink>
+
+            <NavLink to="/offers">
+              Hot offers
+            </NavLink>
+
+            <NavLink to="/gift">
+              Gift boxes
+            </NavLink>
+
+            <NavLink to="/projects">
+              Projects
+            </NavLink>
+
+            <NavLink to="/menu">
+              Menu item
+            </NavLink>
+
+            <NavLink to="/help">
+              Help ▾
+            </NavLink>
+
+          </div>
+
+          <div className="bottom-right">
+            <span>English, USD ▾</span>
+            <span>Ship to 🇩🇪 ▾</span>
+          </div>
+
+        </div>
+
+      </div>
+
     </header>
   );
 };

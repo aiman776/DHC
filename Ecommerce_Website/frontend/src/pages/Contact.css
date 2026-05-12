@@ -1,179 +1,303 @@
+/* HERO SECTION */
 .hero-section-cont {
   position: relative;
-  height: 435px; /* pura screen fill kare */
-  background: url("/images/pagesbanner.png") no-repeat center center/cover;
+  height: 435px;
+
+  /* LIGHT BLUE OVERLAY */
+  background:
+    linear-gradient(
+      rgba(43, 124, 255, 0.55),
+      rgba(0, 180, 216, 0.55)
+    ),
+    url("https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=1400&auto=format&fit=crop")
+    no-repeat center center/cover;
+
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #ffc107 ;
 }
 
+/* CONTACT US TEXT */
 .hero-title-cont {
-  margin-top: 80px; /* navbar se neeche push */
-  font-size: 3rem;
+  margin-top: 80px;
+  font-size: 3.2rem;
   font-weight: bold;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #fefcf6;
-  text-shadow: 0 0 6px rgba(0,0,0,0.7); 
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  /* WHITE COLOR */
+  color: #ffffff;
+
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  padding: 0 20px;
+  line-height: 1.2;
 }
 
-/* Full page background */
+
+/* CONTACT PAGE */
 .contact-page {
   min-height: 100vh;
- background:  linear-gradient(
-              rgba(15, 42, 138, 0.85),
-              rgba(15, 42, 138, 0.85)),
-            url('/images/download.png') no-repeat center center / cover;
 
+  /* LIGHT BLUE THEME */
+  background:
+    linear-gradient(
+      rgba(43, 124, 255, 0.82),
+      rgba(0, 180, 216, 0.82)
+    ),
+    url("https://images.unsplash.com/photo-1522204523234-8729aa6e3d5f?q=80&w=1400&auto=format&fit=crop")
+    no-repeat center center / cover;
 
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Segoe UI', sans-serif;
-  padding: 50px;
+  padding: 60px 40px;
+  padding-top: 250px;
 }
+/* ========================================= */
+/* MAIN CONTAINER */
+/* ========================================= */
 
-/* Two column layout */
 .contact-container {
   display: flex;
-  gap: 40px;
+  gap: 50px;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1200px;
   color: #fff;
-  align-items: center; /* 👈 ye add karo */
+  align-items: center;
 }
 
-/* Left Side - Info */
+
+/* ========================================= */
+/* LEFT SIDE */
+/* ========================================= */
+
 .contact-info {
   flex: 1;
-  padding: 30px;
-  color: #fff;
+  padding: 20px;
 }
 
 .contact-info h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
+  font-size: 38px;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  font-weight: 700;
 }
 
 .contact-info p {
-  margin-bottom: 25px;
-  line-height: 1.6;
+  margin-bottom: 35px;
+  line-height: 1.8;
+  font-size: 16px;
+  color: rgba(255,255,255,0.9);
 }
+
+
+/* INFO ITEMS */
 
 .info-item {
   display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  align-items: flex-start;
+  margin-bottom: 28px;
 }
 
 .info-item i {
-  font-size: 20px;
-  margin-right: 15px;
+  font-size: 22px;
+  margin-right: 18px;
   color: #4caf50;
+  margin-top: 5px;
 }
 
 .info-item h4 {
   font-size: 18px;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  font-weight: 600;
 }
 
-/* Right Side - Form Container */
+.info-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* ========================================= */
+/* RIGHT SIDE FORM */
+/* ========================================= */
+
 .right-contain {
   flex: 1;
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  max-width: 520px;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 24px;
+
+  padding: 45px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+
+  border: 1px solid rgba(255, 255, 255, 0.35);
 }
 
-/* Floating label group */
+
+/* FORM TITLE */
+
+.right-contain h2,
+.right-contain h3 {
+  color: #fff;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+
+/* ========================================= */
+/* FORM FIELDS */
+/* ========================================= */
+
 .section-form form div {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 }
 
 .section-form input,
 .section-form textarea {
   width: 100%;
-  padding: 10px 5px;
+  padding: 14px 10px;
+
   border: none;
-  border-bottom: 1px solid #fff;
+  border-bottom: 2px solid rgba(255,255,255,0.7);
+
   background: transparent;
+
   color: #fff;
+
   font-size: 16px;
+
   outline: none;
+
+  transition: 0.3s ease;
 }
+
+
+/* PLACEHOLDER HIDE */
+
+.section-form input::placeholder,
+.section-form textarea::placeholder {
+  color: transparent;
+}
+
+
+/* LABEL */
 
 .section-form label {
   position: absolute;
-  left: 5px;
-  top: 10px;
-  color: #fff;
+  left: 10px;
+  top: 14px;
+
+  color: rgba(255,255,255,0.85);
+
   pointer-events: none;
+
   transition: 0.3s ease all;
-  opacity: 0.8;
+
+  font-size: 16px;
 }
 
-/* Label animation */
+
+/* LABEL ANIMATION */
+
 .section-form input:focus + label,
 .section-form input:not(:placeholder-shown) + label,
 .section-form textarea:focus + label,
 .section-form textarea:not(:placeholder-shown) + label {
   top: -12px;
-  font-size: 14px;
-  color: #f0f6f0;
+  left: 5px;
+
+  font-size: 13px;
+
+  color: #ffffff;
 }
 
-/* Submit Button */
+
+/* FOCUS EFFECT */
+
+.section-form input:focus,
+.section-form textarea:focus {
+  border-bottom: 2px solid #4caf50;
+}
+
+
+/* TEXTAREA */
+
+.section-form textarea {
+  resize: none;
+  min-height: 120px;
+}
+
+
+/* ========================================= */
+/* BUTTON */
+/* ========================================= */
+
 .right-contain button {
   width: 100%;
-  padding: 12px;
-  background-color: #4caf50;
+
+  padding: 14px;
+
+  background: #4caf50;
+
   color: #fff;
+
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
+
+  border-radius: 10px;
+
+  font-size: 17px;
+
+  font-weight: 600;
+
   cursor: pointer;
-  transition: background 0.3s;
+
+  transition: 0.3s ease;
 }
 
 .right-contain button:hover {
-  background-color: #45a049;
+  background: #43a047;
+  transform: translateY(-2px);
 }
 
 
-/* ============================= */
-/*       RESPONSIVE DESIGN       */
-/* ============================= */
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
 
 @media (max-width: 992px) {
+
   .contact-page {
-    padding: 30px;
+    padding: 40px 25px;
+  }
+
+  .contact-container {
+    gap: 35px;
   }
 
   .contact-info h2 {
-    font-size: 26px;
-  }
-
-  .info-item i {
-    font-size: 18px;
+    font-size: 32px;
   }
 
   .right-contain {
-    padding: 30px;
+    padding: 35px;
   }
 }
 
+
 @media (max-width: 768px) {
-  /* Stack items vertically */
-  .contact-page {
+
+  .contact-container {
     flex-direction: column;
-    gap: 30px;
-    padding: 25px;
     text-align: center;
   }
 
@@ -182,38 +306,52 @@
   }
 
   .contact-info h2 {
-    font-size: 24px;
+    font-size: 28px;
+  }
+
+  .contact-info p {
+    font-size: 15px;
   }
 
   .info-item {
     justify-content: center;
+    text-align: left;
   }
 
   .right-contain {
     width: 100%;
-    padding: 25px;
+    max-width: 100%;
+    padding: 30px;
   }
 
-  .section-form form div {
-    margin-bottom: 20px;
-  }
-
-  .right-contain button {
-    margin-top: 10px;
+  .hero-title-cont {
+    font-size: 2.5rem;
   }
 }
 
+
 @media (max-width: 480px) {
-  .hero-title-con {
+
+  .hero-section-cont {
+    height: 320px;
+  }
+
+  .hero-title-cont {
     font-size: 2rem;
+    margin-top: 40px;
   }
 
   .contact-page {
     padding: 20px;
   }
 
+  .contact-info h2 {
+    font-size: 24px;
+  }
+
   .right-contain {
-    padding: 20px;
+    padding: 22px;
+    border-radius: 18px;
   }
 
   .section-form input,
@@ -221,9 +359,12 @@
     font-size: 14px;
   }
 
+  .section-form label {
+    font-size: 14px;
+  }
+
   .right-contain button {
-    padding: 10px;
+    padding: 12px;
     font-size: 15px;
   }
 }
-

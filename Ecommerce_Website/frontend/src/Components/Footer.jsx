@@ -4,64 +4,83 @@ export const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-cont">
-        
-        {/* Column 1: Logo + About */}
-        <div className="footer-column">
-          <h2 className="logo">Eligent Picks </h2>
-          <p className="tagline">Everything you need, just a click away.</p>
-          <div className="social-icons">
-         <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
-  <i className="fab fa-facebook-f"></i>
-</a>
-<a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer">
-  <i className="fab fa-twitter"></i>
-</a>
-<a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
-  <i className="fab fa-instagram"></i>
-</a>
-<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-  <i className="fab fa-linkedin-in"></i>
-</a>
 
+        {/* Brand */}
+        <div className="footer-column brand-col">
+          <div className="brand-box">
+            <div className="brand-icon">🛍️</div>
+            <h2>Brand</h2>
+          </div>
+
+          <p className="tagline">
+            Best information about the company goes here but now lorem ipsum is
+          </p>
+
+          <div className="social-icons">
+            <i className="fab fa-facebook-f"></i>
+            <i className="fab fa-twitter"></i>
+            <i className="fab fa-linkedin-in"></i>
+            <i className="fab fa-instagram"></i>
           </div>
         </div>
 
-        {/* Column 2: Quick Links */}
+        {/* About */}
         <div className="footer-column">
-          <h3>Quick Links</h3>
+          <h3>About</h3>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/propro">Products</a></li>
-            <li><a href="/cart">Shopping Charts </a></li>
-            <li><a href="/my-orders">Order </a></li>
-            <li><a href="/contact">Contact US</a></li>
+            <li>About Us</li>
+            <li>Find store</li>
+            <li>Categories</li>
+            <li>Blogs</li>
           </ul>
         </div>
 
-        {/* Column 3: Support */}
+        {/* Partnership */}
         <div className="footer-column">
-          <h3>Support</h3>
+          <h3>Partnership</h3>
           <ul>
-              <li><a href="/profile">Profile </a></li>
-            <li><a href="/about">About Us</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/propro">Our products  </a></li>
-            <li><a href="/propro">Explore</a></li>
+            <li>About Us</li>
+            <li>Find store</li>
+            <li>Categories</li>
+            <li>Blogs</li>
           </ul>
         </div>
 
-        {/* Column 4: Newsletter */}
+        {/* Information */}
         <div className="footer-column">
-          <h3>Newsletter</h3>
-          <form className="newsletter-form">
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Subscribe</button>
-          </form>
+          <h3>Information</h3>
+          <ul>
+            <li>Help Center</li>
+            <li>Money Refund</li>
+            <li>Shipping</li>
+            <li>Contact us</li>
+          </ul>
         </div>
+
+        {/* Users */}
+        <div className="footer-column">
+          <h3>For users</h3>
+          <ul>
+            <li>Login</li>
+            <li>Register</li>
+            <li>Settings</li>
+            <li>My Orders</li>
+          </ul>
+        </div>
+
+        {/* Get App */}
+        <div className="footer-column">
+          <h3>Get app</h3>
+          <div className="app-buttons">
+            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" />
+          </div>
+        </div>
+
       </div>
 
       <div className="footer-bottom">
-        © 2026 Elegent Picks. All Rights Reserved.
+        © 2026 Ecommerce. All rights reserved.
       </div>
     </footer>
   );
