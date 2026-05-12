@@ -24,6 +24,7 @@ import MyOrders from "./pages/MyOrders";
 const MainLayout = () => (
   <>
     <Navbar />
+  
     <Outlet />
     <Footer />
   </>

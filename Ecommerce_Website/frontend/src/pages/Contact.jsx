@@ -24,7 +24,7 @@ export const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:7000/api/form/contact", {
+      const response = await fetch("http://localhost:2000/api/form/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -49,10 +49,7 @@ export const Contact = () => {
 
   return (
     <>
-      <div className="hero-section-cont">
-        <h1 className="hero-title-cont">Contact Us</h1>
-      </div>
-
+    
       <div className="contact-page ">
         {/* Left Side - Info Section */}
         <div className="contact-info">
