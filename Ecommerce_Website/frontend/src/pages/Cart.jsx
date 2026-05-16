@@ -1,8 +1,6 @@
-// Cart.jsx
-
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./cart.css";
+import "./Cart.css";
 import API from "../services/api";
 import { useCart } from "../context/CartContext.jsx";
 

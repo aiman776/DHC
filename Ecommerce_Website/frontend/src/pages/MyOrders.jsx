@@ -1,4 +1,4 @@
-import './myOrders.css';
+import './MyOrders.css';
 import { useEffect, useState } from 'react';
 import API from "../services/api";
 

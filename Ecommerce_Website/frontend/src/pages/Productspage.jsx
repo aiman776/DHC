@@ -4,7 +4,7 @@ import axios from "axios";
 import { useCart } from "../context/CartContext";
 
 import SidebarFilter from "../Components/SidebarFilter";
-import { Newsletter } from "../components/Newsletter";
+import { Newsletter } from "../Components/Newsletter.jsx";
 import { Link, useLocation } from "react-router-dom";
 
 export const Productspage = () => {

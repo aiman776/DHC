@@ -1,7 +1,7 @@
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Newsletter } from "../components/Newsletter";
+import { Newsletter } from "../Components/Newsletter.jsx";
 import axios from "axios";
 
 export const Home = () => {
