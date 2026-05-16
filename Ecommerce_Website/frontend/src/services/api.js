@@ -1,7 +1,6 @@
 import axios from "axios";
-
 const API = axios.create({
-  baseURL: "http://localhost:2000/api",
+  baseURL: "https://dhc-production.up.railway.app/api",
 });
 
 // Attach JWT token for protected routes
