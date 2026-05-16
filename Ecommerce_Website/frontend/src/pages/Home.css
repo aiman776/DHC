@@ -1,165 +1,21 @@
-
-
-.hero-section-pro {
-  position: relative;
-  height: 435px; /* pura screen fill kare */
-  background: url("/images/pagesbanner.png") no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #ffc107 ;
-}
-
-.hero-title-pro {
-  margin-top: 80px; /* navbar se neeche push */
-  font-size: 3rem;
-  font-weight: bold;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #f4f3ef;
-  text-shadow: 0 0 6px rgba(0,0,0,0.7); 
-}
-/* Products Section */
-.products-section {
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  text-align: center;
-}
-
-.products-section h2 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #333;
-  font-weight: 600;
-}
-
-/* Products Grid – FIXED 4 PER ROW */
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 👈 ALWAYS 4 */
-  gap: 24px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Product Card */
-.product-card {
-  background-color: #fff;
-  border-radius: 14px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-  padding: 18px;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
-}
-
-/* Product Image – SAME SIZE ALWAYS */
-.product-card img {
-  width: 100%;
-  height: 220px;              /* 👈 fixed height */
-  object-fit: cover;          /* 👈 crop nicely */
-  border-radius: 10px;
-  margin-bottom: 15px;
-}
-
-/* Product Name */
-.product-card h3 {
-  font-size: 1.1rem;
-  color: #222;
-  margin-bottom: 8px;
-}
-
-/* Description */
-.product-card p {
-  font-size: 0.9rem;
-  color: #666;
-  min-height: 40px;
-  margin-bottom: 10px;
-}
-
-/* Price */
-.product-card .price {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #e67e22;
-  margin-bottom: 12px;
-}
-
-/* Button */
-.product-card button {
-  width: 100%;
-  background-color: #0F2A8A;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 0.95rem;
-  cursor: pointer;
-}
-
-.product-card button:hover {
-  background-color: #2980b9;
-}
-
-/* RESPONSIVE */
-@media (max-width: 1024px) {
-  .products-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .products-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* HERO SECTION --------------------------------------------*/
 .home-hero {
   max-width: 1200px;
-  margin: 160px auto;
+  margin: 40px auto;
   display: grid;
   grid-template-columns: 220px 1fr 260px;
-  gap: 20px;
-  padding: 0 10px;
-   margin-bottom: 0%;
 
-  
+  gap: 20px;
+
+  /* SAME AS HOME-OUTDOOR */
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  padding: 20px;
+  overflow: hidden;
+
+  margin-bottom: 40px;
 }
 
 /* LEFT */
@@ -167,6 +23,8 @@
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
+  width:250;
+  height: 360;
   padding: 10px;
 }
 
@@ -192,7 +50,8 @@
   background: url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop") center/cover no-repeat;
   border-radius: 8px;
   position: relative;
-  height: 250px;
+  height: 360px;
+  width: 665PX;
   display: flex;
   align-items: center;
   padding: 20px;
@@ -232,7 +91,9 @@
 .user-card {
   background: #e7f0ff;
   padding: 15px;
-  border-radius: 8px;
+  width: 200px;
+  height: 150px;
+  border-radius: 6px;
   text-align: center;
 }
 
@@ -259,15 +120,19 @@
   padding: 15px;
   border-radius: 8px;
   color: white;
-  font-size: 13px;
+  font-size: 15px;
+    width: 200px;
+  height: 95px;
 }
 
 .promo-card.blue {
   background: #0dcaf0;
+
 }
 
 .promo-card.orange {
   background: #f57c00;
+  
 }
 
 /* RESPONSIVE */
@@ -446,8 +311,8 @@
 }
 
 .outdoor-left h3 {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 600;
   color: #1c1c1c;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -584,8 +449,8 @@
 }
 
 .electronics-left h3 {
-  font-size: 28px;
-  font-weight: 700;
+  font-size: 25px;
+  font-weight: 600;
   color: #1c1c1c;
   line-height: 1.2;
   margin-bottom: 20px;
@@ -863,27 +728,27 @@
   }
 }
 /* PRODUCTS SECTION ----------------------------*/
-.products {
+.productsss {
   max-width: 1200px;
   margin: 40px auto;
 }
 
 /* TITLE */
-.products-title {
+.productsss-title {
   font-size: 20px;
   font-weight: 600;
   margin-bottom: 20px;
 }
 
 /* GRID */
-.products-grid {
+.productsss-grid {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
 }
 
 /* CARD */
-.product-card {
+.productcards {
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 8px;
@@ -893,13 +758,13 @@
 }
 
 /* HOVER EFFECT 🔥 */
-.product-card:hover {
+.productcards:hover {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transform: translateY(-3px);
 }
 
 /* IMAGE */
-.product-card img {
+.productcards img {
   width: 100%;
   height: 140px;
   object-fit: contain;
@@ -907,13 +772,13 @@
 }
 
 /* PRICE */
-.product-card h4 {
+.productcards h4 {
   font-size: 16px;
   margin: 5px 0;
 }
 
 /* TEXT */
-.product-card p {
+.productcards p {
   font-size: 13px;
   color: #8b96a5;
 }
@@ -1016,7 +881,14 @@
 .suppliers {
   max-width: 1200px;
   margin: 40px auto;
-  padding: 0 20px;
+
+  padding: 30px 40px;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  box-sizing: border-box;
 }
 
 .suppliers h3 {

@@ -7,7 +7,7 @@ import { Navbar } from "./Components/Navbar";
 import { Error } from "./pages/error";
 import  Productspage from "./pages/Productspage";
 
-
+  import NavbarTwo from "./Components/NavbarTwo";
 import { Footer } from "./Components/Footer";
 import { Logout } from "./pages/Logout";
 import { Contact } from "./pages/Contact";
@@ -16,7 +16,7 @@ import Profile from "./pages/Profile";
 
 // 🟢 NEW IMPORTS
 import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
+
 import MyOrders from "./pages/MyOrders";
 
 
@@ -24,7 +24,7 @@ import MyOrders from "./pages/MyOrders";
 const MainLayout = () => (
   <>
     <Navbar />
-  
+      <NavbarTwo />
     <Outlet />
     <Footer />
   </>
@@ -46,13 +46,15 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/cart" element={<Cart />} />
          
-
+          <Route path="/gridview" element={<Productspage />} />
+<Route path="/listview" element={<Productspage />} />
 <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/propro" element={<Productspage />} />
-          <Route path="/checkout" element={<Checkout />} />
+        
           <Route path="/contact" element={<Contact />} />
-          <Route path="/my-orders" element={<MyOrders />} />
+          <Route path="/orders" element={<MyOrders />} />
           <Route path="/logout" element={<Logout />} />
+        
         </Route>
 
         {/* 🟡 Auth Layout Routes */}

@@ -12,7 +12,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const res = await fetch("http://localhost:7000/api/auth/profile", {
+        const res = await fetch("http://localhost:2000/api/auth/profile", {
           method: "GET",
           headers: {
             Authorization: `Bearer ${token}`,

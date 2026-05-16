@@ -299,77 +299,77 @@ export const Home = () => {
 
 </section>
 
-<section className="products">
+<section className="productsss">
 
-  <h3 className="products-title">Recommended items</h3>
+  <h3 className="productsss-title">Recommended items</h3>
 
-  <div className="products-grid">
+  <div className="productsss-grid">
 
     {/* CARD 1 */}
-    <div className="product-card">
+    <div className="productcards">
      <img src="/Image/cloth/1.jpg" alt="Smart watch" />
       <h4>$10.30</h4>
       <p>T-shirts with multiple colors, for men</p>
     </div>
 
     {/* CARD 2 */}
-    <div className="product-card">
+    <div className="productcards">
    <img src="/Image/cloth/3.jpg" alt="Smart watch" />
       <h4>$10.30</h4>
       <p>Jeans shorts for men blue color</p>
     </div>
 
     {/* CARD 3 */}
-    <div className="product-card">
+    <div className="productcards">
      <img src="/Image/cloth/7.jpg" alt="Smart watch" />
       <h4>$12.50</h4>
       <p>Brown winter coat medium size</p>
     </div>
 
     {/* CARD 4 */}
-    <div className="product-card">
+    <div className="productcards">
      <img src="/Image/cloth/6.jpg" alt="Smart watch" />
       <h4>$34.00</h4>
       <p>Jeans bag for travel for men</p>
     </div>
 
     {/* CARD 5 */}
-    <div className="product-card">
+    <div className="productcards">
      <img src="/Image/cloth/5.jpg" alt="Smart watch" />
       <h4>$99.00</h4>
       <p>Leather wallet</p>
     </div>
 
     {/* CARD 6 */}
-    <div className="product-card">
+    <div className="productcards">
     <img src="/Image/cloth/4.jpg" alt="Smart watch" />
       <h4>$9.99</h4>
       <p>Canon camera black, 100x zoom</p>
     </div>
 
     {/* CARD 7 */}
-    <div className="product-card">
+    <div className="productcards">
      <img src="/Image/tech/9.jpg" alt="Smart watch" />
       <h4>$8.99</h4>
       <p>Headset for gaming with mic</p>
     </div>
 
     {/* CARD 8 */}
-    <div className="product-card">
+    <div className="productcards">
     <img src="/Image/cloth/5.jpg" alt="Smart watch" />
       <h4>$10.30</h4>
       <p>Smartwatch silver color modern</p>
     </div>
 
     {/* CARD 9 */}
-    <div className="product-card">
+    <div className="productcards">
      <img src="/Image/interior/3.jpg" alt="Smart watch" />
       <h4>$10.30</h4>
       <p>Blue wallet for men leather material</p>
     </div>
 
     {/* CARD 10 */}
-    <div className="product-card">
+    <div className="productcards">
      <img src="/Image/tech/10.jpg" alt="Smart watch" />
       <h4>$80.95</h4>
       <p>Electric kettle for travel</p>
