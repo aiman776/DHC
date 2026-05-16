@@ -63,7 +63,20 @@ export const Navbar = () => {
           </li>
 
           {isLoggedIn ? (
+
             <>
+             <li>
+                <NavLink to="/profile" className="icon-box">
+                  <i className="fa-regular fa-user"></i>
+                  <span>Profile</span>
+                </NavLink>
+              </li>
+                 <li>
+                <NavLink to="/orders" className="icon-box">
+                  <i className="fa-solid fa-bag-shopping"></i>
+                  <span>Orders</span>
+                </NavLink>
+              </li>
               <li>
                 <NavLink to="/cart" className="icon-box">
                   <i className="fa-solid fa-cart-shopping"></i>
@@ -71,19 +84,9 @@ export const Navbar = () => {
                 </NavLink>
               </li>
 
-              <li>
-                <NavLink to="/my-orders" className="icon-box">
-                  <i className="fa-solid fa-bag-shopping"></i>
-                  <span>Orders</span>
-                </NavLink>
-              </li>
+           
 
-              <li>
-                <NavLink to="/profile" className="icon-box">
-                  <i className="fa-regular fa-user"></i>
-                  <span>Profile</span>
-                </NavLink>
-              </li>
+             
             </>
           ) : (
             <li>
@@ -107,7 +110,7 @@ export const Navbar = () => {
       </div>
 
       {/* SECOND NAVBAR */}
-      <div className={menuOpen ? "bottom-navbar open" : "bottom-navbar"}>
+      <div className="bottom-navbar">
 
         <div className="bottom-container">
 
@@ -139,12 +142,66 @@ export const Navbar = () => {
 
           <div className="bottom-right">
             <span>English, USD ▾</span>
-            <span>Ship to 🇩🇪 ▾</span>
+            <span>Ship to ▾</span>
           </div>
 
         </div>
 
       </div>
+      {/* MOBILE DROPDOWN MENU */}
+{menuOpen && (
+  <ul className="mobile-menu">
+    
+    <li>
+      <NavLink to="/" onClick={() => setMenuOpen(false)}>
+        Home
+      </NavLink>
+    </li>
+
+    <li>
+      <NavLink to="/propro" onClick={() => setMenuOpen(false)}>
+        Products
+      </NavLink>
+    </li>
+
+    <li>
+      <NavLink to="/contact" onClick={() => setMenuOpen(false)}>
+        Message
+      </NavLink>
+    </li>
+
+    {isLoggedIn && (
+      <>
+        <li>
+          <NavLink to="/orders" onClick={() => setMenuOpen(false)}>
+            Orders
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/profile" onClick={() => setMenuOpen(false)}>
+            Profile
+          </NavLink>
+        </li>
+
+        <li>
+          <NavLink to="/cart" onClick={() => setMenuOpen(false)}>
+            Cart
+          </NavLink>
+        </li>
+      </>
+    )}
+
+    {!isLoggedIn && (
+      <li>
+        <NavLink to="/login" onClick={() => setMenuOpen(false)}>
+          Login
+        </NavLink>
+      </li>
+    )}
+
+  </ul>
+)}
 
     </header>
   );

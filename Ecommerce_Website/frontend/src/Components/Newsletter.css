@@ -1,6 +1,14 @@
 .newsletter {
-  background-color: #f7f9fc;  /* 👈 light gray */
-  padding: 60px 0;
+  max-width: 1200px;
+  margin: 40px auto;
+
+  padding: 40px;
+
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+
+  box-sizing: border-box;
 }
 
 /* CONTAINER */

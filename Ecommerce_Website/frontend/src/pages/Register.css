@@ -1,11 +1,12 @@
 /* ========================================
-   REGISTER PAGE — SAME AS LOGIN STYLE
+   REGISTER PAGE — MATCHING PROFILE UI
 ======================================== */
 
 :root {
-  --primary: #0d6efd;
-  --primary-dark: #0b5ed7;
-  --text-dark: #000000;
+  --accent: #5b7cff;
+  --accent-dark: #4768e6;
+
+  --text-dark: #1f1f1f;
   --text-light: #ffffff;
 
   --heading-font: "Playfair Display", serif;
@@ -28,7 +29,7 @@
 }
 
 /* -----------------------------
-   GLASS REGISTER CONTAINER
+   GLASS CONTAINER
 ------------------------------ */
 .reg-container {
   width: 380px;
@@ -36,15 +37,21 @@
   padding: 45px 35px;
   border-radius: 18px;
 
-  background: rgba(248, 235, 221, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  /* SAME AS PROFILE */
+  background: rgba(255, 255, 255, 0.78);
 
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  /* BLUE OUTLINE */
+  outline: 2px solid rgba(91, 124, 255, 0.35);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  /* SHADOW REMOVED */
+  box-shadow: none;
+
   text-align: center;
-
   animation: fadeSlide 0.7s ease-out;
 }
 
@@ -55,6 +62,7 @@
   font-family: var(--heading-font);
   font-size: 32px;
   font-weight: bold;
+
   color: var(--text-dark);
   margin-bottom: 25px;
 }
@@ -73,32 +81,39 @@
 .registration-form input {
   width: 100%;
   padding: 12px 5px;
+
   border: none;
-  border-bottom: 2px solid var(--primary);
+  border-bottom: 2px solid var(--accent);
 
   background: transparent;
   color: var(--text-dark);
 
   font-size: 16px;
+  font-family: var(--body-font);
+
   outline: none;
   transition: 0.3s ease;
 }
 
+/* INPUT FOCUS */
 .registration-form input:focus {
-  border-bottom-color: var(--primary-dark);
-  box-shadow: 0 2px 6px rgba(13, 110, 253, 0.4);
+  border-bottom-color: var(--accent-dark);
+
+  /* SHADOW REMOVED */
+  box-shadow: none;
 }
 
 /* -----------------------------
-   FLOATING LABELS
+   FLOATING LABEL
 ------------------------------ */
 .registration-form label {
   position: absolute;
   left: 5px;
   top: 12px;
+
   font-size: 15px;
-  color: var(--text-dark);
-  opacity: 0.7;
+  color: #444;
+
   transition: 0.3s ease;
 }
 
@@ -106,8 +121,7 @@
 .registration-form input:not(:placeholder-shown) + label {
   top: -8px;
   font-size: 13px;
-  color: var(--primary);
-  opacity: 1;
+  color: var(--accent);
 }
 
 /* -----------------------------
@@ -117,7 +131,7 @@
   width: 100%;
   padding: 14px;
 
-  background: var(--primary);
+  background: var(--accent);
   color: var(--text-light);
 
   font-weight: 700;
@@ -127,13 +141,15 @@
   border-radius: 10px;
   cursor: pointer;
 
-  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.45);
+  /* SHADOW REMOVED */
+  box-shadow: none;
+
   transition: all 0.3s ease;
 }
 
 .btn-submit-reg:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
+  background: var(--accent-dark);
+  transform: translateY(-1px);
 }
 
 /* -----------------------------
@@ -146,7 +162,7 @@
 }
 
 .login-link a {
-  color: var(--primary);
+  color: var(--accent);
   font-weight: 600;
   text-decoration: none;
 }
@@ -166,10 +182,13 @@
 
 .home-reg {
   padding: 8px 16px;
-  background: #ffffff;
-  color: var(--primary);
+
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--accent);
 
   border-radius: 8px;
+  border: 1px solid rgba(91, 124, 255, 0.3);
+
   font-weight: 600;
   text-decoration: none;
 
@@ -177,7 +196,7 @@
 }
 
 .home-reg:hover {
-  background: var(--primary);
+  background: var(--accent);
   color: #ffffff;
 }
 
@@ -189,6 +208,7 @@
     opacity: 0;
     transform: translateY(18px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -196,7 +216,7 @@
 }
 
 /* -----------------------------
-   RESPONSIVE — SAME AS LOGIN
+   RESPONSIVE
 ------------------------------ */
 @media (max-width: 480px) {
   .reg-container {

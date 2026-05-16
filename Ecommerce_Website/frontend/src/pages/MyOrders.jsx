@@ -41,13 +41,12 @@ const MyOrders = () => {
 
   return (
     <div>
-      <div className="hero-section-order">
-        <h1 className="hero-title-order">My Orders</h1>
-      </div>
+    
 
       <div className="my-orders-page">
+       
         <div className="orders-container">
-
+ <h3> MyOrders </h3><br/>
        {orders.map(order => (
   <div className="order-box" key={order._id}>
 

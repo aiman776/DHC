@@ -1,0 +1,33 @@
+.navbar-two {
+  width: 100%;
+  padding: 150px 0;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  padding-left: 170px;
+}
+
+/* LINKS */
+.navbar-two a {
+  text-decoration: none;
+  color: #8b96a5;
+  transition: 0.3s;
+}
+
+.navbar-two a:hover {
+  color: #0d6efd;
+}
+
+/* ARROWS */
+.arrow {
+  color: #c4c4c4;
+  font-size: 18px;
+}
+
+/* ACTIVE PAGE */
+.active-page {
+  color: #8b96a5;
+}
